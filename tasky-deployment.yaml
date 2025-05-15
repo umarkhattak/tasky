@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tasky-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tasky
+  template:
+    metadata:
+      labels:
+        app: tasky
+    spec:
+      containers:
+      - name: tasky
+        image: 920373025326.dkr.ecr.us-east-2.amazonaws.com/tasky:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: MONGODB_URI
+          value: mongodb://mongodbuser:password@18.220.195.173:27017/go-mongodb
+        securityContext:
+          runAsUser: 0
+
+
