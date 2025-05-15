@@ -21,6 +21,9 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-2
 
+    - name: Debug AWS CLI Identity
+      run: aws sts get-caller-identity
+
     - name: Deploy CloudFormation Stack
       run: |
         aws cloudformation deploy \
