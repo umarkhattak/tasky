@@ -34,7 +34,7 @@ spec:
       containers:
       - env:
         - name: MONGODB_URI
-          value: mongodb://mongodbuser:password@18.220.195.173:27017/go-mongodb
+          value: mongodb://admin:password@18.220.195.173:27017/go-mongodb
         image: 920373025326.dkr.ecr.us-east-2.amazonaws.com/tasky:latest
         imagePullPolicy: Always
         name: tasky
