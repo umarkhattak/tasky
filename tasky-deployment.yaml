@@ -19,7 +19,7 @@ spec:
         - containerPort: 8080
         env:
         - name: MONGODB_URI
-          value: mongodb://mongodbuser:password@18.220.195.173:27017/go-mongodb
+          value: mongodb://admin:password@18.220.195.173:27017/go-mongodb
         securityContext:
           runAsUser: 0
 
